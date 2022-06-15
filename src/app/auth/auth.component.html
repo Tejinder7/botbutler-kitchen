@@ -1,0 +1,46 @@
+<div class="content" *ngIf="signRegister">
+    <div class="card shadow" style="width: 30rem;">
+        <img class="card-img-top" src="assets/auth.jpg" alt="BotButler" height="220rem">
+        <div class="card-body">
+          <h3 class="card-title">Sign in</h3>
+          <p class="card-text">
+            <form [formGroup]="authForm" (ngSubmit)="signInUser()">
+              <div class="mb-3">
+                  <label for="email" class="form-label"><b>Email</b></label>
+                  <input type="text" id="email" placeholder="tony@avengers.com" class="form-control" formControlName="email">
+              </div>
+              <div class="mb-3">
+                  <label for="password" class="form-label"><b>Password</b></label>
+                  <input type="password" id="password" placeholder="Min 6 digits password" class="form-control" formControlName="password">
+              </div>
+              <button type="submit" class="btn btn-outline-primary">Sign in</button>
+            </form>
+            <br>
+            Don't have an account? <a [routerLink]="[]" (click)="switch()" class="card-link">Register Here</a>
+        </div>
+      </div>
+      FORM DATA:
+    {{authForm.value | json}}
+</div>
+
+<div class="content" *ngIf="!signRegister">
+  <div class="card shadow" style="width: 30rem;">
+    <img class="card-img-top" src="assets/signin.jpg" alt="AutoSpa" height="220rem">
+      <div class="card-body">
+        <h3 class="card-title">REGISTER</h3>
+        <p class="card-text">
+          <form [formGroup]="authForm" (ngSubmit)="registerUser()">
+            <div class="mb-3">
+                <label for="email" class="form-label"><b>Email</b></label>
+                <input type="text" id="email" placeholder="tony@avengers.com" class="form-control" formControlName="email">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label"><b>Password</b></label>
+                <input type="password" id="password" placeholder="Min 6 digits password" class="form-control" formControlName="password">
+            </div>
+            <button type="submit" class="btn btn-outline-primary">Register</button>
+          </form>
+          <br>
+          Already have an account? <a [routerLink]="[]" (click)="switch()" class="card-link">Sign in Here</a> 
+      </div>
+</div>

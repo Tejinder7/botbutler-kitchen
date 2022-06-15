@@ -1,0 +1,22 @@
+<div>
+    <div class="content">
+      <div class="container">
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col" *ngFor="let document of providersList">
+              <div class="card card_docs">
+                <!-- <img src="{{document.imageURL}}" class="card-img-top" alt="..." style="height: 250px;"> -->
+                <div class="card-body">
+                  <!-- <h5 class="card-title">Restaurant: {{document.rname}}</h5> -->
+                  <p class="card-text"><b>Table Number: </b>{{document.number}}</p>
+                  <p class="card-text"><b>Capacity: </b>{{document.capacity}}</p>
+                  <p class="card-text"><b>Booked: </b>{{document.booked}}</p>
+                  <br>
+                  <div class="row">
+                    <button class="btn btn-outline-primary col-md-6" routerLink="/cart" [queryParams]="{id: document.docId, name:document.name}">Active Order</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>

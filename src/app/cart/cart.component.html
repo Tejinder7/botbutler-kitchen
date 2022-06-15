@@ -1,0 +1,18 @@
+<div>
+    <div class="content">
+      <div class="container">
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col" *ngFor="let document of packagesList">
+              <div class="card card_docs">
+                <img src="{{document.imageURL}}" class="card-img-top" alt="..." style="height: 250px;">
+                <div class="card-body">
+                  <h5 class="card-title">{{document.name}}</h5>
+                  <p class="card-text"><b>Price: </b>{{document.price}}</p>
+                  <p class="card-text"><b>Quantity: </b>{{document.quantity}}</p>
+                  <br>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>

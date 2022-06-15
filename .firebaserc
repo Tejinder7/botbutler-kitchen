@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "botbutler-596ba": {
+      "hosting": {
+        "bot-butler-kitchen": [
+          "botbutler-596ba"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "botbutler-596ba"
+  }
+}
